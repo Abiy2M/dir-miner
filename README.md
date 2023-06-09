@@ -12,9 +12,11 @@ To use this script, follow the steps below:
 	 ```chmod +x dir-miner.sh```
 - Then, run the script with the following command:
 	```./dir-miner.sh <repository_link_or_path> <output_file>```
-	
-Syntax: ```./dir-miner.sh wp-install-dir custom-dir.txt```\
-Example: ```./dir-miner.sh https://github.com/tonik/theme.git custom-dir.txt```
+
+Syntax:```./dir-miner.sh <repository_link_or_path> <output_file>```\
+<br>
+Example1: ```./dir-miner.sh wp-install-dir custom-dir.txt```\
+Example2: ```./dir-miner.sh https://github.com/tonik/theme.git custom-dir.txt```
 
 This will directly extract the relative directory paths to each file in the specified local directory or github repo and write them to the output.txt file.
 
