@@ -1,21 +1,21 @@
+# Dir-miner
 
+The purpose of this tool is to generate custom wordlists from GitHub repositories. It provides a convenient way to gather file paths for further analysis. It comes in handy when you have identified that the target in scope is using a tool, theme, or plugin sourced from a public GitHub repository. The wordlist generate by this tool can be used in combination with fuzzers like ffuf, dirbuster and burp intruder to access sensitive files.
 
-This script allows you to extract the relative directory paths to each file in a GitHub repository or a local directory. It provides a convenient way to gather the file paths for further analysis or processing.
-
-#Usage
+## Usage
 To use this script, follow the steps below:
 
-Ensure that you have the necessary permissions to clone a GitHub repository (if using a repository link) or access the local directory.
+- Ensure that you have read and write permissions on your current working directory.
+- After cloning this repo, run:
+	 ```chmod +x dir-miner.sh```
+- Then, run the script with the following command:
+	```./dir-miner.sh <repository_link_or_path> <output_file>```
+	
+example: ```./dir-miner.sh wp-install-dir custom-dir.txt```
+				```./dir-miner.sh https://github.com/tonik/theme.git custom-dir.txt```
 
-Open a terminal and navigate to the directory where the script is located.
+This will directly extract the relative directory paths to each file in the specified local directory or github repo and write them to the output.txt file.
 
-Run the script with the following command:
 
-```./dir-miner.sh <repository_link_or_path> <output_file>```
-
-eg: ```./extract_paths.sh wp-install-dir custom-dir.txt```
-
-This will directly extract the relative directory paths to each file in the specified local directory and write them to the output.txt file.
-
-#Requirements
+## Requirements
 - Bash (Bourne Again SHell)
